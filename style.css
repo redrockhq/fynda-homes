@@ -1854,7 +1854,7 @@ main.content-offset-to-top .main-content-header {
   /**************************************************************/
 
 .landing-page .logo svg {
-    fill: #fff;
+    fill: rgb(136, 107, 107);
 }
 
 .landing-page .header-section {
