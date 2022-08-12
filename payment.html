@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>payment</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="px-3">
+        <div class="theme-container">
+            <div class="row center-xs middle-xs my-5">
+                <div class="mdc-card p-3 p-relative mw-500px w-100">
+                    <div class="column center-xs middle-xs text-center">
+                        <h1 class="uppercase">Pricing Package for basic</h1>
+
+                        <div id="pay-form">
+                            <div class="text-center mt-2">
+
+                                <form method="POST" action="https://checkout.flutterwave.com/v3/hosted/pay">
+                                    <div>
+                                        Your order is ₦2000
+                                    </div>
+                                    <input type="hidden" name="public_key" value="FLWPUBK_TEST-SANDBOXDEMOKEY-X" />
+                                    <input type="hidden" name="customer[email]" value="jessepinkman@walterwhite.org" />
+                                    <input type="hidden" name="customer[name]" value="Jesse Pinkman" />
+                                    <input type="hidden" name="tx_ref" value="bitethtx-019203" />
+                                    <input type="hidden" name="amount" value="2000" />
+                                    <input type="hidden" name="currency" value="NGN" />
+                                    <input type="hidden" name="meta[token]" value="54" />
+                                    <input type="hidden" name="redirect_url" value="https://demoredirect.localhost.me/" />
+                                    <button type="submit" id="start-payment-button">Pay Now</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://checkout.flutterwave.com/v3.js"></script>
+    <script src="./js/pricing.js"></script>
+</body>
+
+</html>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fynda</title>
+    <title>Fyndah</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,7 +44,7 @@
                         <div class="plane"></div>
                     </div>
                 </div>
-                <p class="spinner-text">Fynda</p>
+                <p class="spinner-text">Fyndah Homes</p>
             </div>
         </div>
     </div>
@@ -182,9 +182,9 @@
                                         </a>
                                     </div>
                                     <div>
-                                        <a href="#" class="mdc-button">
+                                        <a href="login.html" class="mdc-button">
                                             <span class="mdc-button__ripple"></span>
-                                            <span class="mdc-button__label">Menu Item</span>
+                                            <span class="mdc-button__label">Profile</span>
                                         </a>
                                     </div>
                                     <div>
@@ -253,7 +253,7 @@
                         <span class="v-divider"></span>
                         <span class="d-flex center-xs middle-xs item">
                             <i class="material-icons mat-icon-sm">mail</i>  
-                            <span class="px-1">info@fynda.com</span>
+                            <span class="px-1">info@fyndah.com</span>
                         </span>
                     </div>
                 </div>
@@ -527,9 +527,9 @@
                                                 </a>
                                             </div>
                                             <div>
-                                                <a href="#" class="mdc-button">
+                                                <a href="login.html" class="mdc-button">
                                                     <span class="mdc-button__ripple"></span>
-                                                    <span class="mdc-button__label">Menu Item</span>
+                                                    <span class="mdc-button__label">Profile</span>
                                                 </a>
                                             </div>
                                             <div>
@@ -601,26 +601,8 @@
                         </div>
                         <div class="tab-content tab-content--active">
                             <div class="row">
-                                <div class="col-xs-12 col-sm-6 col-md-3 p-2">
-                                    <div class="mdc-card pricing-card text-center border-accent p-0 h-100">
-                                        <h2 class="pricing-title my-3">free</h2>
-                                        <div class="bg-accent pricing-header p-3">
-                                            <h1>$ 0<small> /mo</small></h1>
-                                            <p class="desc mb-2">Simplest package to get you started</p>
-                                        </div>
-                                        <div class="p-3">
-                                            <p class="py-2"><span class="mx-2 fw-500">10</span>Properties</p>
-                                            <p class="py-2"><span class="mx-2 fw-500">1</span>Agent Profile</p>
-                                            <p class="py-2 del text-muted">Agency Profiles</p>
-                                            <p class="py-2 del text-muted">Featured Properties</p>
-                                            <button type="submit" class="mdc-button mdc-button--raised">
-                                                <span class="mdc-button__ripple"></span>
-                                                <span class="mdc-button__label">Buy now</span> 
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-6 col-md-3 p-2">
+
+                                <div class="col-xs-4 col-sm-3 col-md-3 p-2">
                                     <div class="mdc-card pricing-card text-center border-accent p-0 h-100">
                                         <h2 class="pricing-title my-3">basic</h2>
                                         <div class="bg-accent pricing-header p-3">
@@ -632,14 +614,28 @@
                                             <p class="py-2"><span class="mx-2 fw-500">3</span>Agent Profiles</p>
                                             <p class="py-2"><span class="mx-2 fw-500">1</span>Agency Profile</p>
                                             <p class="py-2 del text-muted">Featured Properties</p>
-                                            <button type="submit" class="mdc-button mdc-button--raised">
-                                                <span class="mdc-button__ripple"></span>
-                                                <span class="mdc-button__label">Buy now</span> 
-                                            </button>
+
+                                            <form method="POST" action="https://checkout.flutterwave.com/v3/hosted/pay">
+                                                <div>
+                                                    Your order is ₦1,250
+                                                </div>
+                                                <input type="hidden" name="public_key" value="FLWPUBK_TEST-SANDBOXDEMOKEY-X" />
+                                                <input type="hidden" name="customer[email]" value="jessepinkman@walterwhite.org" />
+                                                <input type="hidden" name="customer[name]" value="Jesse Pinkman" />
+                                                <input type="hidden" name="tx_ref" value="bitethtx-019203" />
+                                                <input type="hidden" name="amount" value="1250" />
+                                                <input type="hidden" name="currency" value="NGN" />
+                                                <input type="hidden" name="meta[token]" value="54" />
+                                                <input type="hidden" name="redirect_url" value="https://demoredirect.localhost.me/" />
+                                                <button type="submit" id="start-payment-button">Pay Now</button>
+                                            </form>
+
+
+
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xs-12 col-sm-6 col-md-3 p-2">
+                                <div class="col-xs-4 col-sm-3 col-md-3 p-2">
                                     <div class="mdc-card pricing-card text-center border-accent p-0 h-100">
                                         <h2 class="pricing-title my-3">premium</h2>
                                         <div class="bg-accent pricing-header p-3">
@@ -651,60 +647,34 @@
                                             <p class="py-2"><span class="mx-2 fw-500">10</span>Agent Profile</p>
                                             <p class="py-2"><span class="mx-2 fw-500">5</span>Agency Profiles</p>
                                             <p class="py-2"><span class="mx-2 fw-500">50</span>Featured Properties</p>
-                                            <button type="submit" class="mdc-button mdc-button--raised">
-                                                <span class="mdc-button__ripple"></span>
-                                                <span class="mdc-button__label">Buy now</span> 
-                                            </button>
+                                            <form method="POST" action="https://checkout.flutterwave.com/v3/hosted/pay">
+                                                <div>
+                                                    Your order is ₦2,500
+                                                </div>
+                                                <input type="hidden" name="public_key" value="FLWPUBK_TEST-SANDBOXDEMOKEY-X" />
+                                                <input type="hidden" name="customer[email]" value="jessepinkman@walterwhite.org" />
+                                                <input type="hidden" name="customer[name]" value="Jesse Pinkman" />
+                                                <input type="hidden" name="tx_ref" value="bitethtx-019203" />
+                                                <input type="hidden" name="amount" value="2500" />
+                                                <input type="hidden" name="currency" value="NGN" />
+                                                <input type="hidden" name="meta[token]" value="54" />
+                                                <input type="hidden" name="redirect_url" value="https://demoredirect.localhost.me/" />
+                                                <button type="submit" id="start-payment-button">Pay Now</button>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xs-12 col-sm-6 col-md-3 p-2">
-                                    <div class="mdc-card pricing-card text-center border-accent p-0 h-100">
-                                        <h2 class="pricing-title my-3">professional</h2>
-                                        <div class="bg-accent pricing-header p-3">
-                                            <h1>$ 159<small> /mo</small></h1>
-                                            <p class="desc mb-2">Our most advanced & complete package</p>
-                                        </div>
-                                        <div class="p-3">
-                                            <p class="py-2"><span class="mx-2 fw-500">Unlimited</span>Properties</p>
-                                            <p class="py-2"><span class="mx-2 fw-500">Unlimited</span>Agent Profile</p>
-                                            <p class="py-2"><span class="mx-2 fw-500">Unlimited</span>Agency Profiles</p>
-                                            <p class="py-2"><span class="mx-2 fw-500">Unlimited</span>Featured Properties</p>
-                                            <button type="submit" class="mdc-button mdc-button--raised">
-                                                <span class="mdc-button__ripple"></span>
-                                                <span class="mdc-button__label">Buy now</span> 
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                         <div class="tab-content">
                             <div class="row">
+
                                 <div class="col-xs-12 col-sm-6 col-md-3 p-2">
                                     <div class="mdc-card pricing-card text-center border-accent p-0 h-100">
-                                        <h2 class="pricing-title my-3">free</h2>
+                                        <h2 class="pricing-title my-3">basic</h2>
                                         <div class="bg-accent pricing-header p-3">
-                                            <h1>$ 0<small> /yr</small></h1>
-                                            <p class="desc mb-2">Simplest package to get you started</p>
-                                        </div>
-                                        <div class="p-3">
-                                            <p class="py-2"><span class="mx-2 fw-500">10</span>Properties</p>
-                                            <p class="py-2"><span class="mx-2 fw-500">1</span>Agent Profile</p>
-                                            <p class="py-2 del text-muted">Agency Profiles</p>
-                                            <p class="py-2 del text-muted">Featured Properties</p>
-                                            <button type="submit" class="mdc-button mdc-button--raised">
-                                                <span class="mdc-button__ripple"></span>
-                                                <span class="mdc-button__label">Buy now</span> 
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-6 col-md-3 p-2">
-                                    <div class="mdc-card pricing-card text-center border-accent p-0 h-100">
-                                        <h2 class="pricing-title my-3">basic and</h2>
-                                        <div class="bg-accent pricing-header p-3">
-                                            <h1># 0000<small> /yr</small></h1>
+                                            <h1>N15,000 <small> /yr</small></h1>
                                             <p class="desc mb-2">The most popular package we offer</p>
                                         </div>
                                         <div class="p-3">
@@ -712,10 +682,20 @@
                                             <p class="py-2"><span class="mx-2 fw-500">3</span>Agent Profiles</p>
                                             <p class="py-2"><span class="mx-2 fw-500">1</span>Agency Profile</p>
                                             <p class="py-2 del text-muted">Featured Properties</p>
-                                            <button type="submit" class="mdc-button mdc-button--raised">
-                                                <span class="mdc-button__ripple"></span>
-                                                <span class="mdc-button__label">Buy now</span> 
-                                            </button>
+                                            <form method="POST" action="https://checkout.flutterwave.com/v3/hosted/pay">
+                                                <div>
+                                                    Your order is ₦15000
+                                                </div>
+                                                <input type="hidden" name="public_key" value="FLWPUBK_TEST-SANDBOXDEMOKEY-X" />
+                                                <input type="hidden" name="customer[email]" value="jessepinkman@walterwhite.org" />
+                                                <input type="hidden" name="customer[name]" value="Jesse Pinkman" />
+                                                <input type="hidden" name="tx_ref" value="bitethtx-019203" />
+                                                <input type="hidden" name="amount" value="15000" />
+                                                <input type="hidden" name="currency" value="NGN" />
+                                                <input type="hidden" name="meta[token]" value="54" />
+                                                <input type="hidden" name="redirect_url" value="https://demoredirect.localhost.me/" />
+                                                <button type="submit" id="start-payment-button">Pay Now</button>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
@@ -723,7 +703,7 @@
                                     <div class="mdc-card pricing-card text-center border-accent p-0 h-100">
                                         <h2 class="pricing-title my-3">premium</h2>
                                         <div class="bg-accent pricing-header p-3">
-                                            <h1>$ 929<small> /yr</small></h1>
+                                            <h1>N 30,000<small> /yr</small></h1>
                                             <p class="desc mb-2">The perfect package for your small business</p>
                                         </div>
                                         <div class="p-3">
@@ -731,32 +711,24 @@
                                             <p class="py-2"><span class="mx-2 fw-500">10</span>Agent Profile</p>
                                             <p class="py-2"><span class="mx-2 fw-500">5</span>Agency Profiles</p>
                                             <p class="py-2"><span class="mx-2 fw-500">50</span>Featured Properties</p>
-                                            <button type="submit" class="mdc-button mdc-button--raised">
-                                                <span class="mdc-button__ripple"></span>
-                                                <span class="mdc-button__label">Buy now</span> 
-                                            </button>
+                                            <form method="POST" action="https://checkout.flutterwave.com/v3/hosted/pay">
+                                                <div>
+                                                    Your order is ₦30,000
+                                                </div>
+                                                <input type="hidden" name="public_key" value="FLWPUBK_TEST-SANDBOXDEMOKEY-X" />
+                                                <input type="hidden" name="customer[email]" value="jessepinkman@walterwhite.org" />
+                                                <input type="hidden" name="customer[name]" value="Jesse Pinkman" />
+                                                <input type="hidden" name="tx_ref" value="bitethtx-019203" />
+                                                <input type="hidden" name="amount" value="30000" />
+                                                <input type="hidden" name="currency" value="NGN" />
+                                                <input type="hidden" name="meta[token]" value="54" />
+                                                <input type="hidden" name="redirect_url" value="https://demoredirect.localhost.me/" />
+                                                <button type="submit" id="start-payment-button">Pay Now</button>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xs-12 col-sm-6 col-md-3 p-2">
-                                    <div class="mdc-card pricing-card text-center border-accent p-0 h-100">
-                                        <h2 class="pricing-title my-3">professional</h2>
-                                        <div class="bg-accent pricing-header p-3">
-                                            <h1>$ 1899<small> /yr</small></h1>
-                                            <p class="desc mb-2">Our most advanced & complete package</p>
-                                        </div>
-                                        <div class="p-3">
-                                            <p class="py-2"><span class="mx-2 fw-500">Unlimited</span>Properties</p>
-                                            <p class="py-2"><span class="mx-2 fw-500">Unlimited</span>Agent Profile</p>
-                                            <p class="py-2"><span class="mx-2 fw-500">Unlimited</span>Agency Profiles</p>
-                                            <p class="py-2"><span class="mx-2 fw-500">Unlimited</span>Featured Properties</p>
-                                            <button type="submit" class="mdc-button mdc-button--raised">
-                                                <span class="mdc-button__ripple"></span>
-                                                <span class="mdc-button__label">Buy now</span> 
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -898,6 +870,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"></script>
     <script src="js/libs/jquery.min.js"></script>
+    <script src="https://checkout.flutterwave.com/v3.js"></script>
+    <script src="./js/pricing.js"></script>
     <script src="js/libs/material-component-web.min.js"></script>
     <script src="js/libs/swiper.min.js"></script>
     <script src="js/libs/script.js"></script>
